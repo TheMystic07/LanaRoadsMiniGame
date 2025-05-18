@@ -19,12 +19,17 @@
       </div>
       <div id="unity-warning"> </div>
     </div>
+
+<script type="module">
+  import { sdk } from 'https://esm.sh/@farcaster/frame-sdk'
+  await sdk.actions.ready();
+  console.log('Farcaster SDK ready');
+</script>
+
+
     <script>
-      import { sdk } from 'https://esm.sh/@farcaster/frame-sdk'
-      sdk.actions.ready();
-      sdk.actions.ready().then(() => {
-        console.log('Farcaster SDK ready');
-      });
+  
+
 
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
@@ -102,6 +107,8 @@
           loadingBar.style.display = "none";
         }).catch((message) => {
           alert(message);
+          window.location.href = "https://www.farcaster.xyz/";
+
         });
       };
       document.body.appendChild(script);
