@@ -20,6 +20,12 @@
       <div id="unity-warning"> </div>
     </div>
     <script>
+      import { sdk } from 'https://esm.sh/@farcaster/frame-sdk'
+      sdk.actions.ready();
+      sdk.actions.ready().then(() => {
+        console.log('Farcaster SDK ready');
+      });
+
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("ServiceWorker.js");
