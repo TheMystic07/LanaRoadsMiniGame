@@ -1,2 +1,4 @@
 *.data filter=lfs diff=lfs merge=lfs -text
 *.wasm filter=lfs diff=lfs merge=lfs -text
+Build/NewBuild.wasm filter=lfs diff=lfs merge=lfs -text
+Build/NewBuild.data filter=lfs diff=lfs merge=lfs -text
