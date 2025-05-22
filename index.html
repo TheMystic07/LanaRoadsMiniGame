@@ -22,6 +22,7 @@
 
 <script type="module">
   import { sdk } from 'https://esm.sh/@farcaster/frame-sdk'
+  import 'https://esm.sh/@farcaster/mini-app-solana';
   await sdk.actions.ready();
   console.log('Farcaster SDK ready');
 </script>
@@ -107,6 +108,7 @@
           loadingBar.style.display = "none";
         }).catch((message) => {
           alert(message);
+          window.location.href = "https://www.farcaster.xyz/";
 
         });
       };
